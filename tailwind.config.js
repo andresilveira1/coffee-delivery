@@ -5,7 +5,10 @@ export default {
     extend: {
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
-        alt: ['Baloo', 'sans-serif'],
+        alt: ['"Baloo 2"', 'sans-serif'],
+      },
+      gridTemplateColumns: {
+        checkout: 'repeat(1, minmax(0, 40rem) minmax(0, 1fr))',
       },
       colors: {
         base: {
@@ -28,6 +31,21 @@ export default {
           650: '#8047F8',
           930: '#4B2995',
         },
+      },
+      keyframes: {
+        fadeUp: {
+          from: {
+            opacity: 0,
+            transform: 'translate3d(0, 2rem, 0)',
+          },
+          to: {
+            opacity: 1,
+            transform: 'translate3d(0, 0, 0)',
+          },
+        },
+      },
+      animation: {
+        fadeUp: 'fadeUp 1500ms ease both',
       },
     },
   },
