@@ -4,7 +4,7 @@ import { DefaultLayout } from './layouts'
 
 import { Home } from './pages/Home'
 import { Checkout } from './pages/Checkout'
-import { Success } from './pages/Success'
+import { OrderConfirmed } from './pages/OrderConfirmed'
 
 export function Router() {
   return (
@@ -12,7 +12,7 @@ export function Router() {
       <Route path="/" element={<DefaultLayout />}>
         <Route path="/" element={<Home />} />
         <Route path="/checkout" element={<Checkout />} />
-        <Route path="/checkout/success" element={<Success />} />
+        <Route path="/checkout/success" element={<OrderConfirmed />} />
       </Route>
     </Routes>
   )
