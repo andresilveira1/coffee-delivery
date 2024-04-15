@@ -2,6 +2,8 @@ import { CurrencyDollar, MapPin, Timer } from '@phosphor-icons/react'
 import orderConfirmed from '../../assets/orderConfirmed.svg'
 
 export function OrderConfirmed() {
+  document.title = 'Pedido confirmado | Coffee Delivery'
+
   return (
     <main className="mt-48">
       <div className="flex flex-col gap-1 w-fit">

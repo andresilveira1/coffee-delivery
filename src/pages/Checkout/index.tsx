@@ -30,6 +30,7 @@ type userAddressAndPaymentMethodValidationSchema = zod.infer<
 >
 
 export function Checkout() {
+  document.title = 'Checkout | Coffee Delivery'
   const { register, handleSubmit, control, watch } =
     useForm<userAddressAndPaymentMethodValidationSchema>({
       resolver: zodResolver(userAddressAndPaymentMethodValidationSchema),
@@ -262,9 +263,13 @@ export function Checkout() {
                     </strong>
                     <span className="font-bold text-base-500">R$ 9,90</span>
                   </div>
+
                   <div className="flex items-center gap-2">
                     <Counter className="flex items-center gap-2 bg-base-200 p-2 rounded-md h-8" />
-                    <button className="flex items-center gap-1 p-2 text-xs text-base-700 uppercase rounded-md bg-base-200 hover:bg-base-250">
+                    <button
+                      type="button"
+                      className="flex items-center gap-1 p-2 text-xs text-base-700 uppercase rounded-md bg-base-200 hover:bg-base-250"
+                    >
                       <Trash size={16} className="text-violet-650" />
                       Remover
                     </button>

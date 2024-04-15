@@ -122,6 +122,8 @@ const data = [
 ]
 
 export function Home() {
+  document.title = 'Home | Coffee Delivery'
+
   return (
     <main className="mt-24">
       <Banner />
