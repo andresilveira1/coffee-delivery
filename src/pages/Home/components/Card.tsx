@@ -30,7 +30,7 @@ export function Card({ image, tag, title, description, price }: CardProps) {
         </span>
 
         <div className="flex gap-2">
-          <Counter />
+          <Counter className="flex items-center gap-2 bg-base-200 p-2 rounded-md" />
 
           <button
             title="Adicionar ao carrinho de compras"
