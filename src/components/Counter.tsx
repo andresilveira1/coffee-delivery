@@ -1,21 +1,28 @@
-import { Minus, Plus } from '@phosphor-icons/react'
 import { useState } from 'react'
+import { Minus, Plus } from '@phosphor-icons/react'
 
 interface CounterProps {
   className: string
+  totalQuantityOfProduct: (amount: number) => void
 }
 
-export function Counter({ className }: CounterProps) {
-  const [counter, setCounter] = useState(1)
+export function Counter({ className, totalQuantityOfProduct }: CounterProps) {
+  const [productAmount, setProductAmount] = useState(1)
 
   function handleCounterMinus() {
-    if (counter > 1) {
-      setCounter((prevCounter) => prevCounter - 1)
+    let total = productAmount
+
+    if (productAmount > 1) {
+      setProductAmount((prevProductAmount) => --prevProductAmount)
+      totalQuantityOfProduct(--total)
     }
   }
 
   function handleCounterPlus() {
-    setCounter((prevCounter) => prevCounter + 1)
+    let total = productAmount
+    setProductAmount((prevProductAmount) => ++prevProductAmount)
+
+    totalQuantityOfProduct(++total)
   }
 
   return (
@@ -29,7 +36,7 @@ export function Counter({ className }: CounterProps) {
         <Minus />
       </button>
 
-      <span>{counter}</span>
+      <span>{productAmount}</span>
 
       <button
         type="button"
