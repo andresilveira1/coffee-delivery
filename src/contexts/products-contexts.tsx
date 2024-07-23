@@ -1,5 +1,5 @@
 import { createContext, ReactNode } from 'react'
-import { MenuData } from '../data/MenuData'
+import { MenuData } from '../data/menu-data'
 
 interface ProductsContextsData {
   productsData: typeof MenuData
