@@ -6,7 +6,7 @@ import logo from '../assets/logo-coffee-delivery.svg'
 import { ProductsContext } from '../contexts/products-contexts'
 
 export function Header() {
-  const { newOrder } = useContext(ProductsContext)
+  const { newOrder, addressDelivery } = useContext(ProductsContext)
   const [cartLenght, setCartLenght] = useState(0)
 
   useEffect(() => {
@@ -23,7 +23,8 @@ export function Header() {
         <nav className="flex items-center gap-3">
           <span className="flex items-center gap-1 p-2 text-sm bg-violet-150 text-violet-930 rounded-md">
             <MapPin size={22} weight="fill" className="text-violet-650" />
-            Linhares, ES
+            {addressDelivery &&
+              `${addressDelivery?.city}, ${addressDelivery?.uf}`}
           </span>
 
           <NavLink

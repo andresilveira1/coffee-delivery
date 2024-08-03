@@ -128,7 +128,7 @@ export const MenuData = [
     title: 'Irlandês',
     description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
     price: '9,90',
-    tag: ['ESPECIAL, ALCOÓLICO'],
+    tag: ['ESPECIAL', 'ALCOÓLICO'],
     productAmount: 0,
   },
 ]
