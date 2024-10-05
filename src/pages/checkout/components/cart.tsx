@@ -8,7 +8,6 @@ export function Cart() {
   const { newOrder, removeFromCart } = useContext(ProductsContext)
 
   function handleRemoveFromCart(id: number) {
-    console.log(id)
     removeFromCart(id)
   }
 
